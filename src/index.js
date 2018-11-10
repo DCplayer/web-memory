@@ -13,9 +13,9 @@ class Memoria extends React.Component{
 		this.state = {
 			selected: false, 
 			card_selected: null, 
-			table: [],
+			deck: [],
+			stance: Array(10).fill('card'),
 			spaces: 5, 
-			indexes: Array(10).fill(null),
 			images: Array(10).fill(null), 
 			pairs: 0, 
 			turns: 0
@@ -25,7 +25,7 @@ class Memoria extends React.Component{
 	}
 
 	create_memory(){
-		let cards = [c1, c1, c2, c2, c3, c3, c4, c4, c5, c5]; 
+		let cards = [c1, c2, c3, c4, c5]; 
 		let remaining = [...Array(this.state.spaces * 2).keys()]; 
 
 		for (let i = 0; i< this.state.spaces; i++){
@@ -33,24 +33,44 @@ class Memoria extends React.Component{
 			let second_index = i * 2 + 1; 
 
 			let fst_card = Math.floor(Math.random()*remaining.length);
-			this.state.indexes[first_index] = remaining[fst_card];
+			this.state.deck.push(Math.floor(remaining[fst_card]/2));
 			this.state.images[first_index] = cards[remaining[fst_card]]; 
 			remaining.splice(fst_card, 1);
 
 			let snd_card = Math.floor(Math.random()*remaining.length);
-			this.state.indexes[second_index] = remaining[snd_card];
+			this.state.deck.push(Math.floor(remaining[snd_card]/2));
 			this.state.images[second_index] = cards[remaining[snd_card]]; 
 			remaining.splice(snd_card, 1);
 		}
 
 		console.log('Prueba, shuffle de las imagenes');
 		console.log(this.state.images);
-		console.log(this.state.indexes); 
+		console.log(this.state.deck); 
 	}
 
+	handleClick(e){
+		if (this.state.card_selected === e){
+			return; 
+		}
 
+		this.state.turns++;  
+
+		if(this.state.selected === false){
+			//Si no hay carta seleccionada
+			this.setState({})
+			this.state.stance
+
+		}
+		else{
+			//si habia carta seleccionada anteriormente
+
+		}
+
+		this.setState({selected: this.state.selected == false ? true : false});
+	}
 
 	render(){
+		const cards = [c1, c1, c2, c2, c3, c3, c4, c4, c5, c5];
 		return(
 			<div>Hello World!</div>
 
