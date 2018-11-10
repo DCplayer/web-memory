@@ -18,7 +18,8 @@ class Memoria extends React.Component{
 			spaces: 5, 
 			images: Array(10).fill(null), 
 			pairs: 0, 
-			turns: 0
+			turns: 0, 
+			rep: Array(5).fill(1)
 		}
 
 		this.create_memory(); 
@@ -51,7 +52,7 @@ class Memoria extends React.Component{
 	}
 
 	handleClick(e){
-		if (this.state.card_selected === e || this.state.cards[e] == 'card turned'){
+		if (this.state.card_selected === e || this.state.stance[e] == 'card turned'){
 			return; 
 		}
 
@@ -70,15 +71,15 @@ class Memoria extends React.Component{
 				})
 			}
 
-			this.state.cards[e] = 'card'; 
-			this.state.cards[this.state.card_selected] = 'card'; 
+			this.state.stance[e] = 'card'; 
+			this.state.stance[this.state.card_selected] = 'card'; 
 			this.setState({
 				card_selected: null, 
 				selected: false
 			})	
 		}
 		else{
-			this.cards[e] = 'card turned'
+			this.stance[e] = 'card turned'
 			this.setState({
 				selected: true, 
 				card_selected: e
@@ -86,10 +87,48 @@ class Memoria extends React.Component{
 		}
 	}
 
+	create_keys(index){
+		let rep = this.state.rep[index]; 
+		let newIndex = index + 2; 
+		if (newIndex === 4){
+			newIndex = 7; 
+		} 
+		this.state.rep[index]++; 
+
+		console.log(Math.pow(newIndex, rep))
+		return Math.pow(newIndex, rep)
+	}
+
 	render(){
-		const cards = [c1, c1, c2, c2, c3, c3, c4, c4, c5, c5];
+		const images = [c1, c2, c3, c4, c5]; 
+		const id = 0;
+		console.log('Pruebas, rep')
 		return(
-			<div>Hello World!</div>
+			<div className = "playmat">
+				{
+					this.state.deck.map((index)=>{
+						return (
+							<div className="container">
+								<div className = {this.state.stance[index]}>
+									<div
+										key={this.create_keys(index).value}
+										className="face"
+										onClick = {this.handleClick.bind(this, index)}>
+									</div>
+									<div
+										key={this.create_keys(index).value}
+										className="back"
+										style = {{backgroundImage: 'url(' +images[index]+ ')'}}
+										>
+									</div>
+								</div>
+							</div>
+
+						)
+
+					})
+				}
+			</div>
 
 			)
 	}
