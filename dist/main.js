@@ -262,6 +262,61 @@ eval("/**\n * When source maps are enabled, `style-loader` uses a link element w
 
 /***/ }),
 
+/***/ "./src/carta1.png":
+/*!************************!*\
+  !*** ./src/carta1.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"6fc050ee0177c09195b3bb067898b403.png\";\n\n//# sourceURL=webpack:///./src/carta1.png?");
+
+/***/ }),
+
+/***/ "./src/carta2.png":
+/*!************************!*\
+  !*** ./src/carta2.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"382faeda208bb9dda26bb3a80233d4a0.png\";\n\n//# sourceURL=webpack:///./src/carta2.png?");
+
+/***/ }),
+
+/***/ "./src/carta3.png":
+/*!************************!*\
+  !*** ./src/carta3.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"87acfb60aa774881f43e05d85901ae5d.png\";\n\n//# sourceURL=webpack:///./src/carta3.png?");
+
+/***/ }),
+
+/***/ "./src/carta4.png":
+/*!************************!*\
+  !*** ./src/carta4.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"1d61356fcdcd4f15a2f6c7139789f534.png\";\n\n//# sourceURL=webpack:///./src/carta4.png?");
+
+/***/ }),
+
+/***/ "./src/carta5.png":
+/*!************************!*\
+  !*** ./src/carta5.png ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"9e7bd7426e0887bd559f435297dafd2a.png\";\n\n//# sourceURL=webpack:///./src/carta5.png?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -270,7 +325,7 @@ eval("/**\n * When source maps are enabled, `style-loader` uses a link element w
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _memory_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./memory.css */ \"./src/memory.css\");\n/* harmony import */ var _memory_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_memory_css__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _memory_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./memory.css */ \"./src/memory.css\");\n/* harmony import */ var _memory_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_memory_css__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _carta1_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./carta1.png */ \"./src/carta1.png\");\n/* harmony import */ var _carta1_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_carta1_png__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _carta2_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./carta2.png */ \"./src/carta2.png\");\n/* harmony import */ var _carta2_png__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_carta2_png__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _carta3_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./carta3.png */ \"./src/carta3.png\");\n/* harmony import */ var _carta3_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_carta3_png__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _carta4_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./carta4.png */ \"./src/carta4.png\");\n/* harmony import */ var _carta4_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_carta4_png__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _carta5_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./carta5.png */ \"./src/carta5.png\");\n/* harmony import */ var _carta5_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_carta5_png__WEBPACK_IMPORTED_MODULE_7__);\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\n\n\n\n\n\n\n\nvar Memoria =\n/*#__PURE__*/\nfunction (_React$Component) {\n  _inherits(Memoria, _React$Component);\n\n  function Memoria(props) {\n    var _this;\n\n    _classCallCheck(this, Memoria);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(Memoria).call(this, props));\n    _this.state = {\n      selected: false,\n      card_selected: null,\n      table: [],\n      spaces: 10,\n      order: Array(10).fill(null),\n      pairs: 0,\n      turns: 0\n    };\n    create_memory();\n    return _this;\n  }\n\n  _createClass(Memoria, [{\n    key: \"create_memory\",\n    value: function create_memory() {}\n  }]);\n\n  return Memoria;\n}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
