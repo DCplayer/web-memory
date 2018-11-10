@@ -33,13 +33,15 @@ class Memoria extends React.Component{
 			let second_index = i * 2 + 1; 
 
 			let fst_card = Math.floor(Math.random()*remaining.length);
-			this.state.deck.push(Math.floor(remaining[fst_card]/2));
-			this.state.images[first_index] = cards[remaining[fst_card]]; 
+			let n1mber = Math.floor(remaining[fst_card]/2);
+			this.state.deck.push(n1mber);
+			this.state.images[first_index] = cards[n1mber]; 
 			remaining.splice(fst_card, 1);
 
 			let snd_card = Math.floor(Math.random()*remaining.length);
-			this.state.deck.push(Math.floor(remaining[snd_card]/2));
-			this.state.images[second_index] = cards[remaining[snd_card]]; 
+			let n2mber = Math.floor(remaining[snd_card]/2); 
+			this.state.deck.push(n2mber);
+			this.state.images[second_index] = cards[n2mber]; 
 			remaining.splice(snd_card, 1);
 		}
 
@@ -49,24 +51,39 @@ class Memoria extends React.Component{
 	}
 
 	handleClick(e){
-		if (this.state.card_selected === e){
+		if (this.state.card_selected === e || this.state.cards[e] == 'card turned'){
 			return; 
 		}
 
-		this.state.turns++;  
+		this.state.turns++;
 
-		if(this.state.selected === false){
-			//Si no hay carta seleccionada
-			this.setState({})
-			this.state.stance
+		if(this.state.selected === true){
+			if(this.state.card_selected === e){
+				this.state.pairs++; 
+				if(this.state.pairs === 5){
+					//Ganador
+					console.log("you won")
+				}
+				this.setState({
+					card_selected: null, 
+					selected: false
+				})
+			}
 
+			this.state.cards[e] = 'card'; 
+			this.state.cards[this.state.card_selected] = 'card'; 
+			this.setState({
+				card_selected: null, 
+				selected: false
+			})	
 		}
 		else{
-			//si habia carta seleccionada anteriormente
-
+			this.cards[e] = 'card turned'
+			this.setState({
+				selected: true, 
+				card_selected: e
+			})
 		}
-
-		this.setState({selected: this.state.selected == false ? true : false});
 	}
 
 	render(){
