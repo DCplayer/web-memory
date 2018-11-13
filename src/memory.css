@@ -1,0 +1,83 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 0; 
+}
+
+#root {
+	height: 100%;
+}
+
+.game_box {
+    top: 0%;
+    left: 0%;
+    background-image: url('./playmat.png') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+.playmat {
+    position: relative;
+    left: 50%;
+    display: grid;
+    grid-template-rows: 285px 285px 285px 285px;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-gap: 10px;
+    width: 590px;
+    margin: 20px 20px 20px -400px;
+}
+
+.container {
+    width: 200px;
+    height: 285px;
+    perspective: 600px;
+    position: relative;
+
+}
+
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid #333;
+    font-size: 10;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 10;
+    border-radius: 8px;
+    border: 1px solid #333;
+    cursor: pointer;
+    backface-visibility: hidden;
+    background-image: url("./cardback.png");
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.turned {
+  transform: rotateY(180deg);
+}
+
+

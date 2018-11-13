@@ -55,31 +55,36 @@ class Memoria extends React.Component{
 		if (this.state.card_selected === e || this.state.stance[e] == 'card turned'){
 			return; 
 		}
-
+		
+		if(this.state.card_selected != null){
+			console.log(this.state.card_selected)
+		}
 		this.state.turns++;
+		this.state.stance[e] = 'card turned'
 
-		if(this.state.selected === true){
-			if(this.state.card_selected === e){
-				this.state.pairs++; 
-				if(this.state.pairs === 5){
-					//Ganador
-					console.log("you won")
+		if(this.state.card_selected != null){
+			
+			setTimeout(()=> {
+				if(this.state.deck[this.state.card_selected]=== this.state.deck[e]){
+					this.state.pairs++; 
+					if(this.state.pairs === 5){
+						//Ganador
+						console.log("you won")
+					}
 				}
+				else{
+					this.state.stance[e] = 'card'; 
+					this.state.stance[this.state.card_selected] = 'card'; 
+				}
+
 				this.setState({
 					card_selected: null, 
 					selected: false
 				})
-			}
-
-			this.state.stance[e] = 'card'; 
-			this.state.stance[this.state.card_selected] = 'card'; 
-			this.setState({
-				card_selected: null, 
-				selected: false
-			})	
+		}, 250)	
 		}
 		else{
-			this.stance[e] = 'card turned'
+			this.state.stance[e] = 'card turned'
 			this.setState({
 				selected: true, 
 				card_selected: e
@@ -102,23 +107,23 @@ class Memoria extends React.Component{
 	render(){
 		const images = [c1, c2, c3, c4, c5]; 
 		const id = 0;
-		console.log('Pruebas, rep')
 		return(
-			<div className = "playmat">
-				{
-					this.state.deck.map((index)=>{
-						return (
-							<div className="container">
+			<div className = "game_box">
+				<div className = "playmat">
+					{
+					this.state.deck.map((cont, index)=>{
+						return ( 
+							<div className="container" key={index}>
 								<div className = {this.state.stance[index]}>
 									<div
-										key={this.create_keys(index).value}
+										key={index}
 										className="face"
 										onClick = {this.handleClick.bind(this, index)}>
 									</div>
 									<div
-										key={this.create_keys(index).value}
+										key={index + 10}
 										className="back"
-										style = {{backgroundImage: 'url(' +images[index]+ ')'}}
+										style = {{backgroundImage: 'url(' +this.state.images[index]+ ')'}}
 										>
 									</div>
 								</div>
@@ -129,6 +134,7 @@ class Memoria extends React.Component{
 					})
 				}
 			</div>
+		</div>
 
 			)
 	}
