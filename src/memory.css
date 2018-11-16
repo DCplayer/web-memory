@@ -11,7 +11,7 @@ html, body {
 .game_box {
     top: 0%;
     left: 0%;
-    background-image: url('./playmat.png') ;
+    background-image: url('./karn.png') ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
