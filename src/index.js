@@ -59,17 +59,26 @@ class Memoria extends React.Component{
 		if(this.state.card_selected != null){
 			console.log(this.state.card_selected)
 		}
-		this.state.turns++;
+		this.setState({
+			turns: this.state.turns + 1
+		})
 		this.state.stance[e] = 'card turned'
 
 		if(this.state.card_selected != null){
 			
 			setTimeout(()=> {
 				if(this.state.deck[this.state.card_selected]=== this.state.deck[e]){
-					this.state.pairs++; 
+					this.setState({
+						pairs: this.state.pairs + 1
+					}) 
 					if(this.state.pairs === 5){
 						//Ganador
 						console.log("you won")
+						alert('Has terminado\n Turns: ' + this.state.turns)
+						this.setState({
+							turns: 0
+						})
+
 					}
 				}
 				else{
@@ -81,7 +90,7 @@ class Memoria extends React.Component{
 					card_selected: null, 
 					selected: false
 				})
-		}, 250)	
+		}, 750)	
 		}
 		else{
 			this.state.stance[e] = 'card turned'
@@ -90,6 +99,9 @@ class Memoria extends React.Component{
 				card_selected: e
 			})
 		}
+
+		console.log(this.state.turns)
+		console.log(this.state.pairs)
 	}
 
 	create_keys(index){
